@@ -1,12 +1,58 @@
-.Botao{
-    background-color: chocolate;
+:root{
+    --cor-de-fundo: #1e1e1e;
+    --verde: #6FFF57;
+    --branco: #FFFFFF;
+    --botao-ativo: #3A375E;
+    --botao-inativo: rgba(58,55,94,0.5);
+    --texto-fundo: rgba(58,55,94,0.3);
 }
-.Botao1{
-    background-color: chocolate;
+*{
+    background-color: var(--cor-de-fundo);
+    color: var(--branco);
 }
-.Botao2{
-    background-color: rgb(185, 173, 164);
+span{
+    color: var(--verde);
 }
-.Botao3{
-    background-color: rgb(92, 37, 37);
+.conteudo-principal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.titulo-principal{
+    text-align: center;
+    width: 100%;
+    font-size: 32px;
+}
+.botao{
+    background-color: var(--botao-inativo); /* Define a cor de fundo */
+    color: white;
+    /* Define a cor da fonte */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Definem a forma de exibição */
+    padding: 1em;
+    /* Afastamento interno */
+    font-size: 18px;
+    /* Muda o tamanho da fonte */
+    width: 100%;
+    border-bottom: 4px solid var(--botao-ativo);
+    border-left: 2px solid var(--botao-ativo);
+    border-right: 2px solid var(--botao-ativo);
+}
+ 
+@media screen and  (min-width: 700px){
+    .botoes{
+        display: flex;
+    }
+    .botao:last-child{
+        border-radius: 0 20px 20px 0;
+    }
+    .botao:first-child{
+        border-radius: 20px 0 0 20px;
+    }
 }
