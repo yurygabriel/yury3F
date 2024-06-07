@@ -30,17 +30,13 @@ span{
     font-size: 32px;
 }
 .botao{
-    background-color: var(--botao-inativo); /* Define a cor de fundo */
+    background-color: var(--botao-inativo);
     color: white;
-    /* Define a cor da fonte */
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Definem a forma de exibição */
     padding: 1em;
-    /* Afastamento interno */
     font-size: 18px;
-    /* Muda o tamanho da fonte */
     width: 100%;
     border-bottom: 4px solid var(--botao-ativo);
     border-left: 2px solid var(--botao-ativo);
@@ -58,6 +54,17 @@ span{
  }
  .abas-textos{
     background-color: var(--botao-inativo);
+    padding: 40px;
+    border-radius: 15px;
+ }
+ .aba-conteudo-titulo-principal{
+    font-size: 28px;
+    text-align: center;
+ }
+ .aba-conteudo-titulo-secundario{
+    text-align: center;
+    color: var(--verde);
+    text-transform: uppercase;
  }
 @media screen and  (min-width: 700px){
     .botoes{
