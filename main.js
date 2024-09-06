@@ -35,14 +35,30 @@ function calculaTempo(tempoObjetivo) {
     minutos %= 60;
     horas %= 24;
     if (tempoFinal > 0){
-        return dias + " dias " + horas + " horas " + minutos + " minutos " + segundos + " segundos";
+        return [dias,horas,minutos,segundos]
     } else {
         return "Prazo Finalizado";
     }
 }
 
 function atualizaCronometro(){
-    document.getElementById('dias0').textContent = calculaTempo(tempos0)
+    document.getElementById('dias0').textContent = calculaTempo(tempos[0])[0]
+    document.getElementById('horas0').textContent = calculaTempo(tempos[0])[1]
+    document.getElementById('minutos0').textContent = calculaTempo(tempos[0])[2]
+    document.getElementById('segundos0').textContent = calculaTempo(tempos[0])[3]
+    document.getElementById('dias1').textContent = calculaTempo(tempos[0])[0]
+    document.getElementById('horas1').textContent = calculaTempo(tempos[0])[1]
+    document.getElementById('minutos1').textContent = calculaTempo(tempos[0])[2]
+    document.getElementById('segundos1').textContent = calculaTempo(tempos[0])[3]
+    document.getElementById('dias2').textContent = calculaTempo(tempos[0])[0]
+    document.getElementById('horas2').textContent = calculaTempo(tempos[0])[1]
+    document.getElementById('minutos2').textContent = calculaTempo(tempos[0])[2]
+    document.getElementById('segundos2').textContent = calculaTempo(tempos[0])[3]
+    document.getElementById('dias3').textContent = calculaTempo(tempos[0])[0]
+    document.getElementById('horas3').textContent = calculaTempo(tempos[0])[1]
+    document.getElementById('minutos3').textContent = calculaTempo(tempos[0])[2]
+    document.getElementById('segundos3').textContent = calculaTempo(tempos[0])[3]
+
     for (let i=1; i<contadores.length;i++){
        // contadores[i].textContent = calculaTempo(tempos[i]);  
     }
